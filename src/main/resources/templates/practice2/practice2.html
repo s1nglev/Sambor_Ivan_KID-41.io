@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практичне заняття №2 - Реєстрація</title>
+    <link rel="stylesheet" href="/static/css/practice2/styles2.css">
+</head>
+<body>
+
+
+<nav>
+    <a href="../../../../../../Practice/Practice/src/main/resources/labs-list.html">Список лабораторних робіт</a>
+</nav>
+
+<h1>Реєстраційна форма</h1>
+
+<form action="https://webhook.site/eb99fa4d-bfe3-4741-8243-475449ad3529" method="POST">
+    <label for="first-name">Ім'я:</label>
+    <input type="text" id="first-name" name="firstName" required>
+    <br>
+
+    <label for="last-name">Прізвище:</label>
+    <input type="text" id="last-name" name="lastName" required>
+    <br>
+
+    <label for="email">Електронна пошта:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+
+    <label for="password">Пароль:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+
+    <label for="confirm-password">Підтвердіть пароль:</label>
+    <input type="password" id="confirm-password" name="confirmPassword" required>
+    <br>
+
+    <label for="birthdate">Дата народження:</label>
+    <input type="date" id="birthdate" name="birthDate">
+    <br>
+
+    <label for="gender">Стать:</label>
+    <select id="gender" name="gender">
+        <option value="male">Чоловік</option>
+        <option value="female">Жінка</option>
+        <option value="other">Інша</option>
+    </select>
+    <br>
+
+    <input type="submit" value="Зареєструватися">
+</form>
+
+</body>
+</html>
