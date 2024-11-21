@@ -20,7 +20,6 @@ body, html {
     justify-content: space-between;
 }
 
-
 header {
     background: rgba(255, 255, 255, 0.6);
     padding: 20px;
@@ -47,11 +46,11 @@ nav ul {
     gap: 15px;
 }
 
-.menu li {
+nav .nav-menu li {
     display: inline;
 }
 
-.menu li a {
+nav .nav-menu li a {
     text-decoration: none;
     font-size: 18px;
     color: #ffffff;
@@ -64,7 +63,7 @@ nav ul {
     text-transform: uppercase;
 }
 
-.menu li a:hover {
+nav .nav-menu li a:hover {
     background: rgba(255, 255, 255, 0.8);
     color: #003366;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
@@ -85,14 +84,60 @@ main {
 }
 
 main p {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #003366;
     margin: 5px 0;
-    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
 }
 
 
+section {
+    margin-bottom: 2000px;
+    margin-left: 100px;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: 'Pacifico', cursive;
+    color: #003366;
+    margin-bottom: 20px;
+    margin-left: 650px;
+}
+
+p {
+    font-size: 20px;
+    margin-right: 100px;
+}
+
+v {font-size: 15px;}
+
+
+.button-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    margin-left: -230px;
+}
+
+.button-list li {
+    margin: 15px 0;
+}
+
+.button-list a.custom-button {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    background-color: #003366;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.button-list a.custom-button:hover {
+    background-color: #005599;
+}
 
 footer {
     background: rgba(255, 255, 255, 0.6);
@@ -103,19 +148,34 @@ footer {
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.15);
 }
 
+footer p {
+    margin: 0;
+}
 
 @media (max-width: 768px) {
     header h1 {
         font-size: 24px;
     }
 
-    .menu {
+    .nav-menu {
         flex-direction: column;
         gap: 10px;
     }
 
-    .menu li a {
+    .nav-menu li a {
         font-size: 16px;
         padding: 8px 15px;
+    }
+
+    main {
+        max-width: 90%;
+    }
+
+    main h2 {
+        font-size: 20px;
+    }
+
+    main .button-list a.custom-button {
+        font-size: 16px;
     }
 }
