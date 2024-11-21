@@ -1,0 +1,94 @@
+
+$primary-color: #1e2a47;
+$accent-color: #ff6f61;
+$button-bg-color: $accent-color;
+$button-hover-bg-color: scale-color($accent-color, $lightness: -10%);
+$bg-color: #f8f8f8;
+$text-color: #333;
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Poppins', sans-serif;
+
+
+
+@mixin button-style($bg-color, $hover-color) {
+  background-color: $bg-color;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: $hover-color;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}
+
+body {
+  font-family: $font-primary;
+  margin: 0;
+  padding: 0;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+.header {
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    font-family: $font-secondary;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+  }
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .intro-text {
+    width: 50%;
+    font-family: $font-primary;
+    font-size: 18px;
+    line-height: 1.5;
+    color: $text-color;
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  .intro-image {
+    width: 40%;
+    img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 20px;
+    }
+  }
+}
+
+.button {
+  @include button-style($button-bg-color, $button-hover-bg-color);
+  display: inline-block;
+  margin-top: 30px;
+}
